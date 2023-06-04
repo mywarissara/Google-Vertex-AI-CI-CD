@@ -6,11 +6,11 @@ from kfp.v2.dsl import pipeline
 from kfp.v2.dsl import component
 from kfp.v2 import compiler
 
-@component() 
+@component(packages_to_install=["appengine-python-standard") 
 def concat(a: str, b: str) -> str:
   return a + b
 
-@component
+@component(packages_to_install=["appengine-python-standard")
 def reverse(a: str)->NamedTuple("outputs", [("before", str), ("after", str)]):
   return a, a[::-1]
 
