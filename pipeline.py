@@ -11,8 +11,8 @@ def concat(a: str, b: str) -> str:
   return a + b
 
 @component
-def reverse(a: str)->NamedTuple("outputs", [("before", str), ("after", str)]):
-  return a, a[::-1]
+def reverse(b: str)->NamedTuple("outputs", [("before", str), ("after", str)]):
+  return b, b[::-1]
 
 @pipeline(name="basic-pipeline",
 description="A simple intro pipeline", 
