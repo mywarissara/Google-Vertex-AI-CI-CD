@@ -16,7 +16,7 @@ def reverse(a: str)->NamedTuple("outputs", [("before", str), ("after", str)]):
 
 @pipeline(name="basic-pipeline",
 description="A simple intro pipeline", 
-              pipeline_root='gs://doit-vertex-demo/basic-pipeine')
+              pipeline_root='gs://doit-vertex-demo')
 def basic_pipeline(a: str='stres', b: str='sed'):
     concat_task = concat(a, b)
     reverse_task = reverse(concat_task.output)
